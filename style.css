@@ -1,6 +1,97 @@
+/* GLOBAL STYLING */
 body {
-    font-family: Arial;
-    background-color: black;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #0d1117;
     color: white;
+    line-height: 1.6;
+}
+
+/* BUTTON STYLING */
+.button {
+    padding: 10px 20px;
+    background-color: #4f46e5;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+.button:hover {
+    background-color: #6366f1;
+}
+
+/* HERO / HOME SECTION */
+#home {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     text-align: center;
+}
+
+/* ABOUT SECTION */
+#about {
+    padding: 50px 20px;
+    background-color: #111827;
+}
+#about ul {
+    list-style-type: none;
+    padding: 0;
+}
+#about li {
+    margin: 5px 0;
+}
+
+/* PROJECTS SECTION */
+#projects {
+    padding: 50px 20px;
+    background-color: #1f2937;
+}
+.project-card {
+    background-color: #374151;
+    padding: 20px;
+    margin: 15px 0;
+    border-radius: 8px;
+}
+.project-card a {
+    display: inline-block;
+    margin-right: 10px;
+    color: #4f46e5;
+    text-decoration: none;
+}
+.project-card a:hover {
+    text-decoration: underline;
+}
+
+/* CONTACT SECTION */
+#contact {
+    padding: 50px 20px;
+    background-color: #111827;
+}
+#contact input, #contact textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+    border-radius: 5px;
+    border: none;
+}
+#contact button {
+    padding: 10px 20px;
+    background-color: #4f46e5;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+#contact button:hover {
+    background-color: #6366f1;
+}
+
+/* RESPONSIVE DESIGN */
+@media (max-width: 768px) {
+    .project-card {
+        padding: 15px;
+    }
 }
