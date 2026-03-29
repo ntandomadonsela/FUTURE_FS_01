@@ -1,24 +1,80 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>My Portfolio</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ntando Madonsela | Portfolio</title>
+    <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
-<h1>Hello, I am Ntando Madonsela</h1>
-<p>I am learning full stack web development.</p>
+<!-- HERO / HOME SECTION -->
+<section id="home">
+    <h1>Hello, I’m Ntando Madonsela </h1>
+    <p>Full Stack Web Developer | AI Engineer | Law Student | Problem Solver | Lifelong Learner</p>
+    <a href="#projects" class="button">See My Work</a>
+</section>
 
-<h2>My Skills</h2>
-<p>HTML, CSS, JavaScript</p>
+<!-- ABOUT / SKILLS SECTION -->
+<section id="about">
+    <h2>About Me</h2>
+    <p>I’m a motivated Full Stack Developer and AI engineer, currently completing a hands-on internship building web applications and solving real-world problems.</p>
 
-<h2>My Projects</h2>
-<p>Coming soon...</p>
+    <h3>Skills</h3>
+    <ul>
+        <li>HTML / CSS / JavaScript</li>
+        <li>React / Node.js / Express</li>
+        <li>Database Management: MySQL / MongoDB</li>
+        <li>Version Control: Git / GitHub</li>
+        <li>AI Tools: GitHub Copilot, Emergent</li>
+    </ul>
+</section>
 
-<h2>Contact Me</h2>
-<p>Email: ntandomadonsela168@gmail.com</p>
-<p>Phone: 0836466193</p>
+<!-- PROJECTS SECTION -->
+<section id="projects">
+    <h2>Projects</h2>
+
+    <div class="project-card">
+        <h3>Personal Portfolio Website</h3>
+        <p>Responsive portfolio website showcasing my skills and projects.</p>
+        <a href="https://github.com/yourusername/FUTURE_FS_01" target="_blank">View Code</a>
+        <a href="https://yourusername.github.io/FUTURE_FS_01/" target="_blank">Live Demo</a>
+    </div>
+
+    <div class="project-card">
+        <h3>Client Lead Management System (Mini CRM)</h3>
+        <p>Full-stack CRM for managing client leads with CRUD functionality.</p>
+        <a href="#" target="_blank">View Code</a>
+    </div>
+
+    <div class="project-card">
+        <h3>Local Business Website</h3>
+        <p>Professional website created for a local business, demonstrating real-world problem solving.</p>
+        <a href="#" target="_blank">View Code</a>
+    </div>
+</section>
+
+<!-- CONTACT SECTION -->
+<section id="contact">
+    <h2>Contact Me</h2>
+    <form action="https://formspree.io/f/yourformid" method="POST">
+        <input type="text" name="name" placeholder="Your Name" required>
+        <input type="email" name="_replyto" placeholder="Your Email" required>
+        <textarea name="message" placeholder="Your Message" required></textarea>
+        <button type="submit">Send Message</button>
+    </form>
+</section>
+
+<!-- SMOOTH SCROLL SCRIPT -->
+<script>
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function(e){
+        e.preventDefault();
+        document.querySelector(this.getAttribute('href')).scrollIntoView({ behavior: 'smooth' });
+    });
+});
+</script>
 
 </body>
 </html>
-<link rel="stylesheet" href="style.css">
+<img src="profile.png" alt="Ntando" width="150">
