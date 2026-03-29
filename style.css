@@ -59,7 +59,7 @@ nav ul li a:hover {
     justify-content: center;
     align-items: center;
     text-align: center;
-    background: url('https://tse2.mm.bing.net/th/id/OIP.piW2O_WNN1ll-2bF6vW1OwHaEJ?rs=1&pid=ImgDetMain&o=7&rm=3') no-repeat center center/cover;
+    background: url('images/hero-background.jpg') no-repeat center center/cover;
     position: relative;
     color: #ffffff;
 }
