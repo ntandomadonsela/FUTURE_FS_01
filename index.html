@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ntando Madonsela | Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome for icons -->
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+<!-- NAVIGATION -->
+<nav>
+    <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
+</nav>
+
+<!-- HERO / HOME -->
+<section id="home">
+    <div class="hero-text">
+        <h1>Hello, I am Ntando Madonsela 👋</h1>
+        <p>Full Stack Web Developer | AI Engineer | LLB Candidate | Problem Solver | Lifelong Learner</p>
+        <a href="#projects" class="button">See My Work</a>
+    </div>
+</section>
+
+<!-- ABOUT / SKILLS -->
+<section id="about">
+    <h2>About Me</h2>
+    <p>I’m a motivated Full Stack Developer and AI Engineer building web applications and intelligent systems that solve real-world problems. I have hands-on experience developing responsive web apps, creating scalable back-end solutions, and integrating AI models to enhance functionality.</p>
+    <p>Passionate about using technology to make an impact, I thrive on solving challenges, learning new tools, and delivering innovative solutions. I am always looking for opportunities to contribute to exciting projects and grow as part of a forward-thinking team.</p>
+
+    <h3>Skills</h3>
+    <ul class="skills-list">
+        <li><i class="fab fa-html5"></i> HTML</li>
+        <li><i class="fab fa-css3-alt"></i> CSS</li>
+        <li><i class="fab fa-js"></i> JavaScript</li>
+        <li><i class="fab fa-react"></i> React</li>
+        <li><i class="fab fa-node"></i> Node.js</li>
+        <li><i class="fas fa-database"></i> MongoDB / MySQL</li>
+    </ul>
+</section>
+
+<!-- PROJECTS -->
+<section id="projects">
+    <h2>Projects</h2>
+
+    <div class="project-card">
+        <h3>Personal Portfolio Website</h3>
+        <p>Responsive portfolio website showcasing my skills and projects.</p>
+        <a href="https://github.com/ntandomadonsela/FUTURE_FS_01" target="_blank">View Code</a>
+        <a href="https://ntandomadonsela.github.io/FUTURE_FS_01/" target="_blank">Live Demo</a>
+    </div>
+
+    <div class="project-card">
+        <h3>Client Lead Management System (Mini CRM)</h3>
+        <p>Full-stack CRM for managing client leads with CRUD functionality.</p>
+        <a href="#" target="_blank">View Code</a>
+    </div>
+
+    <div class="project-card">
+        <h3>Local Business Website</h3>
+        <p>Professional website created for a local business, demonstrating real-world problem solving.</p>
+        <a href="#" target="_blank">View Code</a>
+    </div>
+</section>
+
+</section> <!-- this is the end of Projects -->
+
+<!-- CERTIFICATES / ACHIEVEMENTS -->
+<section id="certificates">
+    <h2>Certificates & Achievements</h2>
+    <ul class="certificate-list">
+        <li>Full Stack Web Development Internship – Future Interns</li>
+        <li>AI Data Annotation & Model Training – Toloka</li>
+        <li>Ongoing AI Engineering Projects</li>
+    </ul>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+    <h2>Contact Me</h2>
+    <form action="https://formspree.io/f/yourformid" method="POST">
+        <input type="text" name="name" placeholder="Your Name" required>
+        <input type="email" name="_replyto" placeholder="Your Email" required>
+        <textarea name="message" placeholder="Your Message" required></textarea>
+        <button type="submit">Send Message</button>
+    </form>
+</section>
+
+<!-- FOOTER -->
+<footer>
+    <p>&copy; 2026 Ntando Madonsela. All Rights Reserved.</p>
+</footer>
+
+<!-- Smooth Scroll Script -->
+<script>
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function(e){
+        e.preventDefault();
+        document.querySelector(this.getAttribute('href')).scrollIntoView({ behavior: 'smooth' });
+    });
+});
+</script>
+
+</body>
+</html>
