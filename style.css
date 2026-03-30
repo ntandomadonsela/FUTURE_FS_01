@@ -59,7 +59,7 @@ nav ul li a:hover {
     justify-content: center;
     align-items: center;
     text-align: center;
-    background: url('images/hero-background.jpg');
+    background: url('hero-background.jpg');
 }
 .hero-text h1 {
     font-size: 3em;
