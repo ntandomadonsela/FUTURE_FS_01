@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>CRM System</title>
+  <style>
+    body { font-family: Arial; background: #1f2937; color: white; text-align: center; padding: 20px;}
+    input { padding: 10px; margin: 10px;}
+    button { padding: 10px 20px; margin: 10px; background-color: #4f46e5; color: white; border: none; border-radius: 5px; cursor: pointer;}
+    button:hover { background-color: #6366f1; }
+    ul { list-style: none; padding: 0; margin-top: 20px; }
+    li { padding: 8px; background-color: #374151; margin: 5px 0; border-radius: 5px; }
+  </style>
+</head>
+<body>
+
+<h1>Client Lead Management System</h1>
+
+<input id="name" placeholder="Enter lead name" />
+<button onclick="addLead()">Add Lead</button>
+
+<ul id="list"></ul>
+
+<script type="module">
+import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js";
+import { getFirestore, collection, addDoc, getDocs } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore.js";
+
+// <-- PASTE YOUR CONFIG HERE -->
+const firebaseConfig = {
+  apiKey: "PASTE_YOUR_API_KEY",
+  authDomain: "PASTE_YOUR_AUTH_DOMAIN",
+  projectId: "PASTE_YOUR_PROJECT_ID",
+  storageBucket: "PASTE_YOUR_STORAGE_BUCKET",
+  messagingSenderId: "PASTE_YOUR_MESSAGING_SENDER_ID",
+  appId: "PASTE_YOUR_APP_ID"
+};
+
+const app = initializeApp(firebaseConfig);
+const db = getFirestore(app);
+
+const list = document.getElementById("list");
+
+async function loadLeads() {
+  const snapshot = await getDocs(collection(db, "leads"));
+  list.innerHTML = "";
+  snapshot.forEach((doc) => {
+    const li = document.createElement("li");
+    li.textContent = doc.data().name;
+    list.appendChild(li);
+  });
+}
+
+window.addLead = async function() {
+  const name = document.getElementById("name").value;
+  if (!name) return;
+  await addDoc(collection(db, "leads"), { name });
+  document.getElementById("name").value = "";
+  loadLeads();
+};
+
+loadLeads();
+</script>
+
+</body>
+</html>
